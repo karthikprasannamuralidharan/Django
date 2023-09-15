@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+
+{% block title %} Details about {{mymembers.firstname}} {{mymembers.lastname}} {% endblock %}
+{% comment %}
+<!-- 
+{% block content %}
+    <h1>{{mymembers.firstname}} {{mymembers.lastname}}</h1>
+    <p>Roll number is {{mymembers.rollno}}</p>
+    <p>Date of Birth is {{mymembers.dob}}</p>
+    <p>Back to <a href="/members">Members</a></p>
+{% endblock %} -->
+{% endcomment %}
+
+{% block content %}
+  <div class="mycard">
+    <h1>{{ mymembers.firstname }} {{ mymembers.lastname }}</h1>
+    <p>Roll Number {{ mymembers.rollno }}</p>
+    <p>Date of Birth: {{ mymembers.dob }}</p>
+  </div>
+{% endblock %} 

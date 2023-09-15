@@ -1,0 +1,57 @@
+{% extends "master.html" %}
+
+
+{% block title %}
+
+Testing page {% endblock %}
+
+{% block content %}
+
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>firstname</th>
+        <th>lastname</th>
+    </tr>
+    {% for x in mymembers %}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.firstname}}</td>
+            <td>{{x.lastname}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+
+
+
+    {% for x in fruits%}
+        <h1>{{x}}</h1>
+    {% endfor %}
+
+
+    
+
+{% comment %}
+    {% if fruit is fruits %}
+        <h1>Hiya!!</h1>
+    {% else %}
+        <h1>Bye!!</h1>
+    {% endif %}
+{% endcomment %}
+{% comment %}
+    {% if greeting == 1 %}
+        <h1>Hello</h1>
+    {% elif greeting == 2 %}
+        <h1>Welcome</h1>
+    {% endif %}
+{% endcomment %}
+
+    <p>In views.py you can see what the fruits variable looks like.</p>
+
+{% endblock %}
